@@ -53,7 +53,7 @@ export default function Home() {
             Your ultimate guide to fish breeding and aquarium care for healthy, thriving aquatic life.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-            <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+            <button  className="px-4 py-2 bg-green-900 hover:bg-green-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]" >
               Explore Now
             </button>
             

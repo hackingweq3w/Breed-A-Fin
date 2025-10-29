@@ -11,7 +11,6 @@ import {
   IconInfoCircle,
 } from "@tabler/icons-react";
 
-
 export async function loader() {
   return null;
 }
@@ -46,9 +45,11 @@ export default function Guide() {
       <div className="relative z-5 flex items-start justify-center pt-4 md:pt-6 pb-0">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="bg-green-600/20 backdrop-blur-sm rounded-4xl p-8 md:p-12 border border-green-300/30 shadow-2xl">
-            <p className={`text-2xl md:text-4xl lg:text-3xl text-white font-bold text-center ${
-              animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-4"
-            }`}>
+            <p
+              className={`text-2xl md:text-4xl lg:text-3xl text-white font-bold text-center ${
+                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-4"
+              }`}
+            >
               Fish Breeding Guide
             </p>
           </div>
@@ -69,7 +70,9 @@ export default function Guide() {
 }
 
 function ExpandableCardDemo() {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(null);
+  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
+    null
+  );
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -77,7 +80,8 @@ function ExpandableCardDemo() {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") setActive(false);
     }
-    document.body.style.overflow = active && typeof active === "object" ? "hidden" : "auto";
+    document.body.style.overflow =
+      active && typeof active === "object" ? "hidden" : "auto";
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
@@ -176,13 +180,14 @@ function ExpandableCardDemo() {
         ) : null}
       </AnimatePresence>
 
-      <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* ✅ UPDATED GRID BELOW */}
+      <ul className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 pb-10">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer transition"
           >
             <div className="flex gap-4 flex-col w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -239,7 +244,6 @@ const CloseIcon = () => (
 );
 
 const cards = [
-  // Existing fish
   {
     description: "Live-bearer",
     title: "Guppy",
@@ -306,8 +310,6 @@ const cards = [
       </p>
     ),
   },
-
-  // New fish added below
   {
     description: "Oviparous – Schooling Fish",
     title: "Tetra",
@@ -375,11 +377,11 @@ const cards = [
     ctaLink: "/rainbowfish",
     content: () => (
       <p>
-          Barbs are lively, colorful schooling fish that thrive in groups of six or more.
-      They prefer spacious, well-oxygenated tanks of at least 25–30 gallons with moderate water flow.
-      Maintain warm, slightly acidic to neutral water (74–80°F / 23–27°C) and provide plenty of plants or spawning mops for egg laying.
-      Barbs scatter eggs among plants; remove adults post-spawn to prevent them from eating the eggs.
-      Fry hatch in about two days and can be fed infusoria or finely crushed flakes once free-swimming..
+        Barbs are lively, colorful schooling fish that thrive in groups of six or more.
+        They prefer spacious, well-oxygenated tanks of at least 25–30 gallons with moderate water flow.
+        Maintain warm, slightly acidic to neutral water (74–80°F / 23–27°C) and provide plenty of plants or spawning mops for egg laying.
+        Barbs scatter eggs among plants; remove adults post-spawn to prevent them from eating the eggs.
+        Fry hatch in about two days and can be fed infusoria or finely crushed flakes once free-swimming.
       </p>
     ),
   },
