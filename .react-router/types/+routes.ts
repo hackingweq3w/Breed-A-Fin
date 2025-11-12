@@ -37,7 +37,16 @@ type Pages = {
   "/tetra": {
     params: {};
   };
-  "/zebra": {
+  "/zebra-danio": {
+    params: {};
+  };
+  "/angelfish": {
+    params: {};
+  };
+  "/corydoras": {
+    params: {};
+  };
+  "/Rainbowfish": {
     params: {};
   };
   "/ai": {
@@ -51,7 +60,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/introduction" | "/guide" | "/guppy" | "/goldfish" | "/platy" | "/betta" | "/molly" | "/tetra" | "/zebra" | "/ai" | "/about";
+    page: "/" | "/introduction" | "/guide" | "/guppy" | "/goldfish" | "/platy" | "/betta" | "/molly" | "/tetra" | "/zebra-danio" | "/angelfish" | "/corydoras" | "/Rainbowfish" | "/ai" | "/about";
   };
   "routes/home.tsx": {
     id: "routes/home";
@@ -91,7 +100,19 @@ type RouteFiles = {
   };
   "routes/zebra.tsx": {
     id: "routes/zebra";
-    page: "/zebra";
+    page: "/zebra-danio";
+  };
+  "routes/angel.tsx": {
+    id: "routes/angel";
+    page: "/angelfish";
+  };
+  "routes/Corydorascatfish.tsx": {
+    id: "routes/Corydorascatfish";
+    page: "/corydoras";
+  };
+  "routes/barbs.tsx": {
+    id: "routes/barbs";
+    page: "/Rainbowfish";
   };
   "routes/ai.tsx": {
     id: "routes/ai";

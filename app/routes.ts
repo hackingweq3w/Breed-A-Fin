@@ -10,7 +10,10 @@ export default [
   route("betta", "routes/betta.tsx"),
   route("molly", "routes/molly.tsx"),
   route("tetra", "routes/tetra.tsx"),
-  route("zebra", "routes/zebra.tsx"),
+  route("zebra-danio", "routes/zebra.tsx"),
+  route("angelfish", "routes/angel.tsx"),
+  route("corydoras", "routes/Corydorascatfish.tsx"),
+  route("Rainbowfish", "routes/barbs.tsx"),
   route("ai", "routes/ai.tsx"),
   route("about", "routes/about.tsx"),
 ] satisfies RouteConfig;
