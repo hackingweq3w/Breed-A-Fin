@@ -113,12 +113,16 @@ export default function Tetra() {
             </ol>
 
             {/* Button */}
-            <a
-              href="/guide"
-              className="inline-flex items-center justify-center mt-10 px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
-            >
-              Watch the video
-            </a>
+            <div className="mt-10">
+              <a
+                href="https://youtu.be/SKWNyXCxBIk?si=Hk0OX9gTOi8u4qU-"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
+              >
+                Watch the video
+              </a>
+            </div>
           </div>
         </div>
       </div>

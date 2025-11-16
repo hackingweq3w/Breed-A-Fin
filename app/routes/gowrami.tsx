@@ -5,17 +5,17 @@ export async function loader() {
   return null;
 }
 
-export default function ZebraDanio() {
+export default function Gourami() {
   const [animate, setAnimate] = React.useState(false);
   React.useEffect(() => {
     setAnimate(true);
-    document.title = "Zebra Danio Breeding Guide - Breed-A-Fin";
+    document.title = "Gourami Breeding Guide - Breed-A-Fin";
   }, []);
 
   return (
     <>
-      {/* Background animation */}
       <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-green-900 via-green-800 to-green-700">
+        {/* Animated gradient circles */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-green-400/60 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-green-300/70 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -25,49 +25,44 @@ export default function ZebraDanio() {
         </div>
       </div>
 
-      {/* Main content */}
+      {/* Scrollable content */}
       <div className="relative z-10 min-h-[120vh] flex items-start justify-center pt-16 md:pt-24 pb-40">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="bg-green-800/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-green-300/30 shadow-2xl">
-            
             {/* Main Heading */}
             <p
               className={`text-2xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center ${
-                animate
-                  ? "fade-in-blur"
-                  : "opacity-0 blur-[12px] translate-y-2"
+                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Zebra Danio Breeding Guide
+              Gourami Breeding Guide
             </p>
 
             {/* Intro Paragraph */}
             <p
               className={`text-base md:text-lg mt-6 text-white font-normal inter-var text-center max-w-3xl mx-auto ${
-                animate
-                  ? "fade-in-blur fade-in-blur-delay"
-                  : "opacity-0 blur-[12px] translate-y-2"
+                animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Zebra Danios are hardy, fast-breeding egg scatterers ideal for beginners. They thrive in groups, spawn readily in cool, oxygen-rich water, and are known for their active nature and striped appearance.
+              Gouramis are labyrinth fish that thrive in calm waters with plenty of plants. With stable conditions and proper diet, they breed successfully and produce healthy fry.
             </p>
 
-            {/* Choosing the Pair */}
+            {/* Choosing Section */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
                 animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Choosing the Breeding Pair
+              Choosing the Gourami
             </h2>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Choose healthy, mature fish—about 6 months old. Males are slender with brighter stripes, while females appear plumper, especially when filled with eggs. Select active, responsive fish showing courtship behavior like chasing and circling.
+              Select healthy, active fish with vibrant colors and no signs of disease. Avoid stressed or damaged fish. A balanced male-to-female ratio improves breeding success.
             </p>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Condition them for 1–2 weeks with high-quality live or frozen foods such as daphnia, mosquito larvae, and brine shrimp. Feed small, frequent meals and maintain stable water to ensure the female produces healthy eggs.
+              Condition breeders for 1–2 weeks on varied foods: high-quality flakes, frozen/live protein like brine shrimp or daphnia, and vegetable matter for plant-eating species.
             </p>
 
-            {/* Tank Setup */}
+            {/* Tank Setup Section */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
                 animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
@@ -76,13 +71,13 @@ export default function ZebraDanio() {
               Tank Setup
             </h2>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Set up a shallow 10–15 gallon breeding tank with a mesh divider or marbles at the bottom to protect the eggs. Maintain a temperature of 74–78°F (23–26°C), slightly soft water (5–10 dGH), and a neutral pH around 7.0.
+              Use a 20–30 gallon tank with lots of floating and rooted plants. Maintain warm, calm water (78–82°F / 25–28°C) and gentle filtration. Avoid strong currents as labyrinth fish prefer still water.
             </p>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Provide gentle aeration, no strong currents, and dim lighting. Add fine-leaved plants or spawning mops for egg deposition. Avoid bright light, as Zebra Danio eggs are light-sensitive.
+              Provide hiding spots for the female and areas for the male to build bubble nests. Keep water clean with regular small changes.
             </p>
 
-            {/* Breeding Steps */}
+            {/* Steps for Breeding Section */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
                 animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
@@ -92,34 +87,36 @@ export default function ZebraDanio() {
             </h2>
             <ol className="text-base md:text-lg mt-4 text-white font-normal inter-var max-w-3xl mx-auto space-y-3 list-decimal list-inside">
               <li>
-                <strong>Introduce the Pair at Night:</strong> Place the conditioned male and female (or a small group of 2 males and 3 females) into the breeding tank in the evening.
+                <strong>Condition Adults:</strong> Feed a varied diet of flakes, live/frozen foods, and vegetables.
               </li>
               <li>
-                <strong>Spawning in the Morning:</strong> Spawning usually begins at sunrise. Males chase females, who scatter eggs among plants or over the substrate.
+                <strong>Bubble Nest:</strong> Males build bubble nests at the surface for eggs.
               </li>
               <li>
-                <strong>Remove Adults:</strong> Once spawning is complete (after 1–2 hours), remove the adults to prevent them from eating the eggs.
+                <strong>Spawning:</strong> Female releases eggs into the nest; male fertilizes them.
               </li>
               <li>
-                <strong>Egg Incubation:</strong> Eggs hatch in about 2–3 days. Keep lighting dim and water gently aerated during this period.
+                <strong>Remove Female:</strong> After spawning, remove female to prevent aggression.
               </li>
               <li>
-                <strong>Fry Care:</strong> Fry become free-swimming after another 2–3 days. Start feeding infusoria or commercial liquid fry food several times a day.
+                <strong>Fry Care:</strong> Feed infusoria or finely crushed flakes until large enough for baby brine shrimp.
               </li>
               <li>
-                <strong>Growth:</strong> After one week, introduce microworms or freshly hatched brine shrimp. Maintain excellent water quality with small daily changes.
+                <strong>Maintain Water:</strong> Keep water clean, warm, and calm to support fry survival.
               </li>
             </ol>
 
             {/* Button */}
-            <a
-                href="https://youtu.be/2ty2BBQYm0A?si=vUm8xEw6thbbhToM"
+            <div className="mt-10">
+              <a
+                href="https://youtu.be/aTDTxplDyX0?si=4ECKy0gEEdHOteve"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
               >
                 Watch the video
               </a>
+            </div>
           </div>
         </div>
       </div>

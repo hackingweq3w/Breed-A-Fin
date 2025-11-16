@@ -50,6 +50,9 @@ type Pages = {
   "/Rainbowfish": {
     params: {};
   };
+  "/Gowrami": {
+    params: {};
+  };
   "/ai": {
     params: {};
   };
@@ -64,7 +67,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/introduction" | "/guide" | "/guppy" | "/goldfish" | "/platy" | "/betta" | "/molly" | "/tetra" | "/zebra-danio" | "/angelfish" | "/corydoras" | "/Rainbowfish" | "/ai" | "/about" | "/swordtail";
+    page: "/" | "/introduction" | "/guide" | "/guppy" | "/goldfish" | "/platy" | "/betta" | "/molly" | "/tetra" | "/zebra-danio" | "/angelfish" | "/corydoras" | "/Rainbowfish" | "/Gowrami" | "/ai" | "/about" | "/swordtail";
   };
   "routes/home.tsx": {
     id: "routes/home";
@@ -118,6 +121,10 @@ type RouteFiles = {
     id: "routes/barbs";
     page: "/Rainbowfish";
   };
+  "routes/gowrami.tsx": {
+    id: "routes/gowrami";
+    page: "/Gowrami";
+  };
   "routes/ai.tsx": {
     id: "routes/ai";
     page: "/ai";
@@ -147,6 +154,7 @@ type RouteModules = {
   "routes/angel": typeof import("./app/routes/angel.tsx");
   "routes/Corydorascatfish": typeof import("./app/routes/Corydorascatfish.tsx");
   "routes/barbs": typeof import("./app/routes/barbs.tsx");
+  "routes/gowrami": typeof import("./app/routes/gowrami.tsx");
   "routes/ai": typeof import("./app/routes/ai.tsx");
   "routes/about": typeof import("./app/routes/about.tsx");
   "routes/swordtail": typeof import("./app/routes/swordtail.tsx");

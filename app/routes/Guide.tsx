@@ -400,4 +400,16 @@ const cards = [
       </p>
     ),
   },
+  {
+    description: "Oviparous",
+    title: "Gowrami",
+    src: "gowrami.jpg",
+    ctaText: "Learn More",
+    ctaLink: "/gowrami",
+    content: () => (
+      <p>
+       Gouramis are colorful labyrinth fish with long, flowing fins and a peaceful temperament. They display interesting behaviors such as bubble nest building and gentle courtship. Males are more vibrant, while females are slightly smaller and paler.
+      </p>
+    ),
+  },
 ];

@@ -14,6 +14,7 @@ export default [
   route("angelfish", "routes/angel.tsx"),
   route("corydoras", "routes/Corydorascatfish.tsx"),
   route("Rainbowfish", "routes/barbs.tsx"),
+  route ("Gowrami", "routes/gowrami.tsx"),
   route("ai", "routes/ai.tsx"),
   route("about", "routes/about.tsx"),
   route("swordtail", "routes/swordtail.tsx"),
