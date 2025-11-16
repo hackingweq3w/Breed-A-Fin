@@ -9,7 +9,7 @@ export default function Platy() {
   const [animate, setAnimate] = React.useState(false);
   React.useEffect(() => {
     setAnimate(true);
-    document.title = "Platy Breeding Guide - Breed-A-Fin";
+    document.title = "Platy Breeding Guide - Breed‑A‑Fin";
   }, []);
 
   return (
@@ -29,6 +29,7 @@ export default function Platy() {
       <div className="relative z-10 min-h-[120vh] flex items-start justify-center pt-16 md:pt-24 pb-40">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="bg-green-800/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-green-300/30 shadow-2xl">
+            
             {/* Main Heading */}
             <p
               className={`text-2xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center ${
@@ -44,7 +45,7 @@ export default function Platy() {
                 animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Platys are live-bearers, well-suited for beginners. With stable water and proper conditioning, they readily produce healthy fry in community or breeding setups.
+              Platies are livebearers — very beginner-friendly and prolific. With stable water conditions and good nutrition, breeding them is quite straightforward. Their fry are active and relatively easy to raise.
             </p>
 
             {/* Choosing Section */}
@@ -56,10 +57,10 @@ export default function Platy() {
               Choosing the Platy
             </h2>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Pick active, well-shaped fish with clear eyes, smooth scales, and intact fins. Avoid sunken bellies or clamped fins. Females are typically larger with a fuller abdomen; males often have a more pointed anal fin (gonopodium).
+              Choose healthy platies: look for clear eyes, smooth scales, and active swimming. Avoid fish with sunken bellies. For breeding, aim for around **2–3 females per male** to reduce stress and chasing.
             </p>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Aim for a 2–3 female to 1 male ratio to minimize harassment. Condition adults for a week or more using varied foods: quality flakes, blanched vegetables (zucchini, spinach), and small live/frozen foods for protein.
+              A well-conditioned fish will have a plumper belly (in females) and a distinct anal fin in males (gonopodium), which helps in identifying sexes properly.
             </p>
 
             {/* Tank Setup Section */}
@@ -71,10 +72,10 @@ export default function Platy() {
               Tank Setup
             </h2>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Use a 15–20 gallon tank with dense plants or breeding grass for fry refuge. Maintain gentle sponge filtration and stable temperature 72–78°F (22–26°C) with slightly alkaline water (pH ~7.2–8.0).
+              Use a 15–20 gallon tank with dense plants or breeding grass for fry to hide. Maintain a gentle sponge filter and keep water temperature around **22–26°C (72–78°F)** with a pH around **7.2–8.0**.
             </p>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Provide moderate hardness (GH) and regular small water changes. Good lighting supports plant growth, which in turn improves fry survival by offering microfauna and cover.
+              Regular small water changes help keep water quality stable, and moderate hardness supports healthy growth. Plants not only provide cover but also micro-organisms that baby platies can feed on.
             </p>
 
             {/* Steps for Breeding Section */}
@@ -86,41 +87,30 @@ export default function Platy() {
               Steps for Breeding
             </h2>
             <ol className="text-base md:text-lg mt-4 text-white font-normal inter-var max-w-3xl mx-auto space-y-3 list-decimal list-inside">
-              <li>
-                <strong>Condition Adults:</strong> Feed varied foods (quality flakes, veggies, brine shrimp) for a week.
-              </li>
-              <li>
-                <strong>Group Ratio:</strong> Keep 1 male with 2–3 females.
-              </li>
-              <li>
-                <strong>Provide Cover:</strong> Dense plants or breeding grass protect newborn fry from adults.
-              </li>
-              <li>
-                <strong>Gestation:</strong> Pregnancy lasts ~24–30 days; watch for squarer abdomen near birth.
-              </li>
-              <li>
-                <strong>Separate or Heavily Plant:</strong> Move pregnant females to a breeder/birthing tank or ensure heavy planting.
-              </li>
-              <li>
-                <strong>Fry Foods:</strong> Offer powdered fry food or baby brine shrimp several times daily.
-              </li>
-              <li>
-                <strong>Maintenance:</strong> Small, frequent water changes; avoid strong suction.
-              </li>
+              <li><strong>Condition Adults:</strong> Feed a mix of quality flakes, vegetables (like zucchini), and live/frozen foods to prepare for breeding.</li>
+              <li><strong>Maintain Ratio:</strong> Keep ~1 male for 2–3 females to increase comfort and reduce stress.</li>
+              <li><strong>Provide Hiding Spots:</strong> Plants or fine-leaved breeding grass protect fry from adults.</li>
+              <li><strong>Gestation:</strong> Female carry fry for ~24–30 days. A plumper belly and dark gravid spot are signs of pregnancy.</li>
+              <li><strong>Birthing:</strong> When the female looks ready, move her to a separate birthing tank or a breeder box, or insure dense plant cover in the main tank.</li>
+              <li><strong>Feed Fry:</strong> Give powdered fry food or baby brine shrimp multiple times a day.</li>
+              <li><strong>Maintenance:</strong> Do small, frequent water changes and use a gentle filter to avoid harming fry.</li>
             </ol>
 
-            {/* Button */}
-            <a
-              href="/guide"
-              className="inline-flex items-center justify-center mt-10 px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
-            >
-              Watch the video
-            </a>
+            {/* Watch Video Button */}
+            <div className="mt-10">
+              <a
+                href="https://www.youtube.com/watch?v=Hj5VRTnLC9I"  // Lazarus the fish boy video
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
+              >
+                Watch the video
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
     </>
   );
 }
-
-

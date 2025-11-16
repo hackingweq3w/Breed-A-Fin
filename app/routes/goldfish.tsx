@@ -9,7 +9,7 @@ export default function Goldfish() {
   const [animate, setAnimate] = React.useState(false);
   React.useEffect(() => {
     setAnimate(true);
-    document.title = "Goldfish Breeding Guide - Breed-A-Fin";
+    document.title = "Hand Breeding Goldfish - Breed‑A‑Fin";
   }, []);
 
   return (
@@ -29,13 +29,14 @@ export default function Goldfish() {
       <div className="relative z-10 min-h-[120vh] flex items-start justify-center pt-16 md:pt-24 pb-40">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="bg-green-800/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-green-300/30 shadow-2xl">
+            
             {/* Main Heading */}
             <p
               className={`text-2xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center ${
                 animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Goldfish Breeding Guide
+              Hand Breeding Goldfish
             </p>
 
             {/* Intro Paragraph */}
@@ -44,86 +45,73 @@ export default function Goldfish() {
                 animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Goldfish are oviparous, egg-scattering fish. Spawning is seasonal and responds to temperature and photoperiod changes, with adults dispersing adhesive eggs over plants or mops.
+              Hand breeding goldfish is a precise method to control reproduction and improve fry quality. In this technique, eggs and milt are manually collected and fertilized, ensuring a higher success rate than natural spawning.
             </p>
 
-            {/* Choosing Section */}
+            {/* Choosing Breeders */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
                 animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Choosing Breeders
+              Selecting Breeders
             </h2>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Select mature, healthy fish that exhibit the traits you wish to propagate (body shape, finnage, coloration). During breeding season, males often show breeding tubercles; females appear fuller with ripening eggs.
+              Choose healthy, mature goldfish with good body shape and vibrant colors. Males develop small white breeding tubercles on their gill covers and fins, while females appear fuller due to eggs.
             </p>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Condition breeders on a rich, varied diet: quality pellets, gel foods, live/frozen protein (brine shrimp, bloodworms), and vegetable matter (peas, spinach). Good conditioning improves egg viability and spawning vigor.
+              Condition them for 2–3 weeks with a high-protein diet (live/frozen foods like bloodworms, brine shrimp) along with vegetables such as peas or spinach. Well-conditioned breeders produce stronger eggs and sperm.
             </p>
 
-            {/* Tank Setup Section */}
+            {/* Tank Setup */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
                 animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Tank Setup
+              Tank Preparation
             </h2>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Use a spacious tank with robust aeration and multiple spawning mops/plants to catch adhesive eggs. Maintain excellent filtration but diffuse currents to avoid egg damage.
+              Use a separate, shallow tank for hand breeding with gentle aeration. The bottom should be free of gravel to simplify egg collection. Provide spawning mops or soft-leaved plants to gently hold eggs once fertilized.
             </p>
             <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Simulate spring by offering a cool period (mid 60s°F / ~18–19°C), then gradually warming to low 70s°F (~21–22°C) while increasing daylight. Stable, clean water and oxygenation are critical for egg development.
+              Maintain clean water, stable temperature, and proper oxygenation. Hand breeding works best in slightly cooler water, gradually warming to trigger egg and sperm readiness.
             </p>
 
-            {/* Steps for Breeding Section */}
+            {/* Steps for Hand Breeding */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
                 animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
-              Steps for Breeding
+              Hand Breeding Steps
             </h2>
             <ol className="text-base md:text-lg mt-4 text-white font-normal inter-var max-w-3xl mx-auto space-y-3 list-decimal list-inside">
-              <li>
-                <strong>Condition Adults:</strong> High-quality diet with greens and protein-rich foods.
-              </li>
-              <li>
-                <strong>Temperature Cue:</strong> Provide cooler period, then gradual warm-up to induce spawn.
-              </li>
-              <li>
-                <strong>Spawning Medium:</strong> Add mops/plants for eggs to adhere to.
-              </li>
-              <li>
-                <strong>Remove Adults:</strong> After spawning, remove parents to prevent egg predation.
-              </li>
-              <li>
-                <strong>Egg Care:</strong> Ensure aeration; optional antifungal (e.g., methylene blue) if fungus appears.
-              </li>
-              <li>
-                <strong>Hatching:</strong> Eggs hatch in 2–7 days depending on temperature.
-              </li>
-              <li>
-                <strong>First Foods:</strong> Infusoria or specialized fry foods until large enough for baby brine shrimp.
-              </li>
-              <li>
-                <strong>Water Quality:</strong> Frequent small water changes; avoid strong currents.
-              </li>
+              <li><strong>Prepare Breeders:</strong> Condition males and females for 2–3 weeks with a high-protein diet.</li>
+              <li><strong>Collect Eggs:</strong> Gently strip eggs from the female into a clean container using a soft touch.</li>
+              <li><strong>Collect Milt:</strong> Gently strip sperm from the male into a separate container.</li>
+              <li><strong>Fertilize:</strong> Mix eggs and milt carefully, ensuring all eggs are coated for fertilization.</li>
+              <li><strong>Transfer Eggs:</strong> Place fertilized eggs onto spawning mops or plants in a separate hatching tank with gentle aeration.</li>
+              <li><strong>Monitor Hatching:</strong> Eggs typically hatch within 4–7 days depending on temperature. Remove unfertilized or dead eggs to prevent fungus.</li>
+              <li><strong>Feed Fry:</strong> Start with infusoria or liquid fry food, then gradually introduce baby brine shrimp and finely crushed high-quality flakes.</li>
+              <li><strong>Maintain Water Quality:</strong> Perform frequent small water changes, avoid strong currents, and monitor water parameters carefully.</li>
             </ol>
 
-            {/* Button */}
-            <a
-              href="/guide"
-              className="inline-flex items-center justify-center mt-10 px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
-            >
-              Watch the video
-            </a>
+            {/* Watch Video Button */}
+            <div className="mt-10">
+              <a
+                href="https://www.youtube.com/watch?v=c_XnMwhAI4I"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
+              >
+                Watch the video
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
     </>
   );
 }
-
-

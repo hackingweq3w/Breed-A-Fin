@@ -9,6 +9,7 @@ import {
   IconBook2,
   IconBrain,
   IconInfoCircle,
+  IconTopologyStar,
 } from "@tabler/icons-react";
 
 export async function loader() {
@@ -26,7 +27,7 @@ export default function Guide() {
     { title: "Home", icon: <IconHome className="h-5 w-5 text-white" />, href: "/" },
     { title: "Introduction", icon: <IconBook2 className="h-5 w-5 text-white" />, href: "/introduction" },
     { title: "Guide", icon: <IconBrain className="h-5 w-5 text-white" />, href: "/guide" },
-    { title: "AI Assistant", icon: <IconInfoCircle className="h-5 w-5 text-white" />, href: "/ai" },
+    { title: "AI Assistant", icon: <IconTopologyStar className="h-5 w-5 text-white" />, href: "/ai" },
     { title: "About", icon: <IconInfoCircle className="h-5 w-5 text-white" />, href: "#about" },
   ];
 

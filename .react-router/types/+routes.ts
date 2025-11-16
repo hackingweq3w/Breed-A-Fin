@@ -6,6 +6,7 @@ declare module "react-router" {
   interface Register {
     pages: Pages
     routeFiles: RouteFiles
+    routeModules: RouteModules
   }
 }
 
@@ -55,12 +56,15 @@ type Pages = {
   "/about": {
     params: {};
   };
+  "/swordtail": {
+    params: {};
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/introduction" | "/guide" | "/guppy" | "/goldfish" | "/platy" | "/betta" | "/molly" | "/tetra" | "/zebra-danio" | "/angelfish" | "/corydoras" | "/Rainbowfish" | "/ai" | "/about";
+    page: "/" | "/introduction" | "/guide" | "/guppy" | "/goldfish" | "/platy" | "/betta" | "/molly" | "/tetra" | "/zebra-danio" | "/angelfish" | "/corydoras" | "/Rainbowfish" | "/ai" | "/about" | "/swordtail";
   };
   "routes/home.tsx": {
     id: "routes/home";
@@ -122,4 +126,28 @@ type RouteFiles = {
     id: "routes/about";
     page: "/about";
   };
+  "routes/swordtail.tsx": {
+    id: "routes/swordtail";
+    page: "/swordtail";
+  };
+};
+
+type RouteModules = {
+  "root": typeof import("./app/root.tsx");
+  "routes/home": typeof import("./app/routes/home.tsx");
+  "routes/introduction": typeof import("./app/routes/introduction.tsx");
+  "routes/Guide": typeof import("./app/routes/Guide.tsx");
+  "routes/guppy": typeof import("./app/routes/guppy.tsx");
+  "routes/goldfish": typeof import("./app/routes/goldfish.tsx");
+  "routes/platy": typeof import("./app/routes/platy.tsx");
+  "routes/betta": typeof import("./app/routes/betta.tsx");
+  "routes/molly": typeof import("./app/routes/molly.tsx");
+  "routes/tetra": typeof import("./app/routes/tetra.tsx");
+  "routes/zebra": typeof import("./app/routes/zebra.tsx");
+  "routes/angel": typeof import("./app/routes/angel.tsx");
+  "routes/Corydorascatfish": typeof import("./app/routes/Corydorascatfish.tsx");
+  "routes/barbs": typeof import("./app/routes/barbs.tsx");
+  "routes/ai": typeof import("./app/routes/ai.tsx");
+  "routes/about": typeof import("./app/routes/about.tsx");
+  "routes/swordtail": typeof import("./app/routes/swordtail.tsx");
 };

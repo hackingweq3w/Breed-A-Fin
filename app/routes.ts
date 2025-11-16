@@ -16,4 +16,5 @@ export default [
   route("Rainbowfish", "routes/barbs.tsx"),
   route("ai", "routes/ai.tsx"),
   route("about", "routes/about.tsx"),
+  route("swordtail", "routes/swordtail.tsx"),
 ] satisfies RouteConfig;

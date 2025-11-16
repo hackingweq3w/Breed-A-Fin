@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { BackgroundGradientAnimation } from "components/ui/background-gradient-animation";
 import {
   IconHome,
   IconBook2,
@@ -41,9 +40,7 @@ export default function Introduction() {
             {/* Main Heading */}
             <p
               className={`text-2xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center ${
-                animate
-                  ? "fade-in-blur"
-                  : "opacity-0 blur-[12px] translate-y-2"
+                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
               Guppy Breeding Guide
@@ -52,9 +49,7 @@ export default function Introduction() {
             {/* Intro Paragraph */}
             <p
               className={`text-base md:text-lg mt-6 text-white font-normal inter-var text-center max-w-3xl mx-auto ${
-                animate
-                  ? "fade-in-blur fade-in-blur-delay"
-                  : "opacity-0 blur-[12px] translate-y-2"
+                animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
               Guppy breeding is one of the most fascinating and rewarding aspects
@@ -72,9 +67,7 @@ export default function Introduction() {
             {/* Choosing the Guppy Section */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate
-                  ? "fade-in-blur"
-                  : "opacity-0 blur-[12px] translate-y-2"
+                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
               Choosing the Guppy
@@ -96,9 +89,7 @@ export default function Introduction() {
             {/* Tank Setup Section */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate
-                  ? "fade-in-blur"
-                  : "opacity-0 blur-[12px] translate-y-2"
+                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
               Tank Setup
@@ -117,47 +108,34 @@ export default function Introduction() {
             {/* Steps for Breeding Section */}
             <h2
               className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate
-                  ? "fade-in-blur"
-                  : "opacity-0 blur-[12px] translate-y-2"
+                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
               Steps for Breeding
             </h2>
             <ol className="text-base md:text-lg mt-4 text-white font-normal inter-var max-w-3xl mx-auto space-y-3 list-decimal list-inside">
-              <li>
-                <strong>Separate Males and Females:</strong> Keep males and females in separate tanks until ready to breed.
-              </li>
-              <li>
-                <strong>Condition the Fish:</strong> Feed high-quality live or frozen foods like brine shrimp or daphnia to enhance health and coloration.
-              </li>
-              <li>
-                <strong>Introduce for Breeding:</strong> Place 1 male with 2–3 females in a breeding tank to reduce stress and aggression.
-              </li>
-              <li>
-                <strong>Provide Hiding Spots:</strong> Add plants or breeding grass so that fry can hide from adults after birth.
-              </li>
-              <li>
-                <strong>Monitor the Female:</strong> Gravid females carry fry for 21–30 days; watch for the gravid spot darkening.
-              </li>
-              <li>
-                <strong>Separate the Fry:</strong> Once born, either leave the female in a heavily planted tank or move her to a tank with a mesh breeder box to protect fry.
-              </li>
-              <li>
-                <strong>Feed the Fry:</strong> Start with infusoria or liquid fry food, then move to baby brine shrimp as they grow.
-              </li>
-              <li>
-                <strong>Maintain Water Quality:</strong> Perform regular water changes and monitor temperature (24–28°C) to ensure healthy growth.
-              </li>
+              <li><strong>Separate Males and Females:</strong> Keep males and females in separate tanks until ready to breed.</li>
+              <li><strong>Condition the Fish:</strong> Feed high-quality live or frozen foods like brine shrimp or daphnia to enhance health and coloration.</li>
+              <li><strong>Introduce for Breeding:</strong> Place 1 male with 2–3 females in a breeding tank to reduce stress and aggression.</li>
+              <li><strong>Provide Hiding Spots:</strong> Add plants or breeding grass so that fry can hide from adults after birth.</li>
+              <li><strong>Monitor the Female:</strong> Gravid females carry fry for 21–30 days; watch for the gravid spot darkening.</li>
+              <li><strong>Separate the Fry:</strong> Once born, either leave the female in a heavily planted tank or move her to a tank with a mesh breeder box to protect fry.</li>
+              <li><strong>Feed the Fry:</strong> Start with infusoria or liquid fry food, then move to baby brine shrimp as they grow.</li>
+              <li><strong>Maintain Water Quality:</strong> Perform regular water changes and monitor temperature (24–28°C) to ensure healthy growth.</li>
             </ol>
 
-            {/* Button */}
-            <a
-              href="/guide"
-              className="inline-flex items-center justify-center mt-10 px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
-            >
-              Watch the video
-            </a>
+            {/* Watch Video Button */}
+            <div className="mt-10">
+              <a
+                href="https://www.youtube.com/watch?v=xAqdZh-upho"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
+              >
+                Watch the video
+              </a>
+            </div>
+
           </div>
         </div>
       </div>

@@ -54,23 +54,18 @@ const FloatingDockMobile = ({
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
+                animate={{ opacity: 1, y: 0 }}
                 exit={{
                   opacity: 0,
                   y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
+                  transition: { delay: idx * 0.05 },
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
                 <a
                   href={item.href}
                   key={item.title}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-green-400/30 border border-green-300/50 shadow-2xl shadow-green-500/30"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600/30 border border-emerald-500/50 shadow-2xl shadow-emerald-700/30"
                 >
                   <div className="h-4 w-4 text-white">{item.icon}</div>
                 </a>
@@ -79,9 +74,10 @@ const FloatingDockMobile = ({
           </motion.div>
         )}
       </AnimatePresence>
+
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-green-400/30 border border-green-300/50 shadow-2xl shadow-green-500/30"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600/30 border border-emerald-500/50 shadow-2xl shadow-emerald-700/30"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-white" />
       </button>
@@ -102,7 +98,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-full bg-green-400/30 backdrop-blur-md px-4 pb-3 md:flex border border-green-300/50 shadow-2xl shadow-green-500/40",
+        "mx-auto hidden h-16 items-end gap-4 rounded-full bg-emerald-600/30 backdrop-blur-md px-4 pb-3 md:flex border border-emerald-500/50 shadow-2xl shadow-emerald-700/40",
         className,
       )}
     >
@@ -136,11 +132,7 @@ function IconContainer({
   let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
 
   let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-  let heightTransformIcon = useTransform(
-    distance,
-    [-150, 0, 150],
-    [20, 40, 20],
-  );
+  let heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
 
   let width = useSpring(widthTransform, {
     mass: 0.1,
@@ -173,7 +165,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-green-400/30 border border-green-300/50 shadow-2xl shadow-green-500/30"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-emerald-600/30 border border-emerald-500/50 shadow-2xl shadow-emerald-700/30"
       >
         <AnimatePresence>
           {hovered && (
@@ -187,6 +179,7 @@ function IconContainer({
             </motion.div>
           )}
         </AnimatePresence>
+
         <motion.div
           style={{ width: widthIcon, height: heightIcon }}
           className="flex items-center justify-center"
@@ -197,4 +190,3 @@ function IconContainer({
     </a>
   );
 }
-
