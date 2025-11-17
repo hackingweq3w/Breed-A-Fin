@@ -1,12 +1,9 @@
 "use client";
 import React from "react";
 
-export async function loader() {
-  return null;
-}
-
 export default function Barbs() {
   const [animate, setAnimate] = React.useState(false);
+
   React.useEffect(() => {
     setAnimate(true);
     document.title = "Barbs Breeding Guide - Breed-A-Fin";
@@ -14,116 +11,144 @@ export default function Barbs() {
 
   return (
     <>
-      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-green-900 via-green-800 to-green-700">
-        {/* Animated gradient circles */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-green-400/60 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-green-300/70 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-[1400px] h-[1400px] bg-green-500/55 rounded-full blur-3xl animate-pulse delay-500"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-[900px] h-[900px] bg-green-600/65 rounded-full blur-3xl animate-pulse delay-1500"></div>
-          <div className="absolute top-1/3 right-1/3 w-[1100px] h-[1100px] bg-green-400/60 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      {/* 🌑 DARK EMERALD BACKGROUND */}
+      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-black via-[#0a1a0a] to-black">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-emerald-700/40 rounded-full blur-[150px] animate-float-slow"></div>
+          <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-emerald-600/40 rounded-full blur-[150px] animate-float-slow delay-700"></div>
+          <div className="absolute top-1/2 left-1/2 w-[1400px] h-[1400px] bg-emerald-500/35 rounded-full blur-[150px] animate-float-slow delay-300"></div>
         </div>
       </div>
 
-      {/* Scrollable content */}
-      <div className="relative z-10 min-h-[120vh] flex items-start justify-center pt-16 md:pt-24 pb-40">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-green-800/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-green-300/30 shadow-2xl">
-            {/* Main Heading */}
+      {/* 📜 CONTENT */}
+      <div className="relative z-10 min-h-[160vh] flex items-start justify-center pt-20 md:pt-32 pb-40">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-12 border border-emerald-400/20 shadow-xl shadow-emerald-900/40">
+
+            {/* TITLE */}
             <p
-              className={`text-2xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center ${
-                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
+              className={`text-4xl md:text-6xl font-extrabold text-emerald-300 drop-shadow-[0_0_20px_rgba(0,255,100,0.35)] ${
+                animate ? "fade-in-blur" : "opacity-0 blur-xl translate-y-4"
               }`}
             >
               Barbs Breeding Guide
             </p>
 
-            {/* Intro Paragraph */}
+            {/* DESCRIPTION */}
             <p
-              className={`text-base md:text-lg mt-6 text-white font-normal inter-var text-center max-w-3xl mx-auto ${
-                animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-[12px] translate-y-2"
+              className={`text-white text-base md:text-lg mt-6 leading-relaxed ${
+                animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-xl translate-y-4"
               }`}
             >
               Barbs are lively schooling fish that spawn by scattering eggs among plants or over a substrate. They do not care for their eggs, so separating the adults after spawning is essential for fry survival.
             </p>
 
-            {/* Choosing Section */}
-            <h2
-              className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
-              }`}
-            >
-              Choosing Breeders
-            </h2>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Select healthy, mature barbs around 6–8 months old. Males are usually slimmer with brighter coloration, while females are rounder when filled with eggs. Choose active and disease-free fish for best results.
-            </p>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Condition breeders with a varied diet rich in live and frozen foods such as bloodworms, daphnia, and brine shrimp. This helps stimulate spawning behavior and ensures better egg production.
-            </p>
+            {/* SECTIONS */}
+            <div className={`mt-10 grid md:grid-cols-1 gap-6 ${
+              animate ? "fade-in-blur fade-in-blur-delay-2" : "opacity-0 blur-xl translate-y-4"
+            }`}>
 
-            {/* Tank Setup Section */}
-            <h2
-              className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
-              }`}
-            >
-              Tank Setup
-            </h2>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Use a separate 15–20 gallon breeding tank with a temperature of 77–80°F (25–27°C) and slightly acidic water (pH 6.5–7.0). Provide fine-leaved plants or a spawning mop for the eggs to fall into, and use a mesh or marbles on the bottom to protect them from being eaten.
-            </p>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Keep the lighting dim, and use gentle aeration. A sponge filter works best for maintaining clean, stable water without harming eggs or fry.
-            </p>
+              {/* Choosing Breeders */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Choosing Breeders</h3>
+                <p className="text-white text-sm">
+                  Select healthy, mature barbs around 6–8 months old. Males are slimmer with brighter colors, while females are rounder when filled with eggs.
+                </p>
+                <p className="text-white text-sm mt-2">
+                  Condition breeders with live or frozen foods like bloodworms, daphnia, and brine shrimp to stimulate spawning and ensure better egg production.
+                </p>
+              </div>
 
-            {/* Steps for Breeding Section */}
-            <h2
-              className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
-              }`}
-            >
-              Steps for Breeding
-            </h2>
-            <ol className="text-base md:text-lg mt-4 text-white font-normal inter-var max-w-3xl mx-auto space-y-3 list-decimal list-inside">
-              <li>
-                <strong>Condition Adults:</strong> Feed live and frozen foods daily for 1–2 weeks before spawning.
-              </li>
-              <li>
-                <strong>Set Up Breeding Tank:</strong> Prepare a dimly lit tank with plants, spawning mops, or marbles.
-              </li>
-              <li>
-                <strong>Introduce the Pair:</strong> Add one female with one or two males in the evening.
-              </li>
-              <li>
-                <strong>Spawning:</strong> Spawning usually occurs early morning; eggs are scattered over plants or substrate.
-              </li>
-              <li>
-                <strong>Remove Adults:</strong> After spawning, remove the parents immediately to prevent them from eating the eggs.
-              </li>
-              <li>
-                <strong>Egg Care:</strong> Maintain gentle aeration; eggs hatch within 24–48 hours depending on temperature.
-              </li>
-              <li>
-                <strong>Feeding Fry:</strong> Feed infusoria or liquid fry food initially, then baby brine shrimp once free-swimming.
-              </li>
-              <li>
-                <strong>Water Quality:</strong> Keep water clean with small, regular water changes and avoid strong currents.
-              </li>
-            </ol>
+              {/* Tank Setup */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Tank Setup</h3>
+                <p className="text-white text-sm">
+                  Use a 15–20 gallon breeding tank at 77–80°F (25–27°C) with slightly acidic water (pH 6.5–7.0). Provide fine-leaved plants or spawning mops, and protect eggs using mesh or marbles on the bottom.
+                </p>
+                <p className="text-white text-sm mt-2">
+                  Keep lighting dim and use gentle aeration. A sponge filter works best for clean water without harming eggs or fry.
+                </p>
+              </div>
 
-            {/* Button */}
-            <a
+              {/* Water Parameters */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Water Parameters</h3>
+                <p className="text-white text-sm">
+                  Maintain temperature at 77–80°F (25–27°C), pH 6.5–7.0, and soft to moderately hard water. Keep ammonia and nitrite levels at 0 ppm and nitrate under 20 ppm.
+                </p>
+                <p className="text-white text-sm mt-2">
+                  Regular small water changes (20–25% every 2–3 days) ensure stable conditions for eggs and fry survival.
+                </p>
+              </div>
+
+              {/* Breeding Steps */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Breeding Steps</h3>
+                <ol className="text-white text-sm list-decimal list-inside space-y-1">
+                  <li><strong>Condition Adults:</strong> Feed live and frozen foods daily for 1–2 weeks before spawning.</li>
+                  <li><strong>Set Up Breeding Tank:</strong> Prepare a dimly lit tank with plants, spawning mops, or marbles.</li>
+                  <li><strong>Introduce the Pair:</strong> Add one female with one or two males in the evening.</li>
+                  <li><strong>Spawning:</strong> Eggs are scattered over plants or substrate, usually in the morning.</li>
+                  <li><strong>Remove Adults:</strong> Remove parents immediately after spawning to prevent egg predation.</li>
+                  <li><strong>Egg Care:</strong> Maintain gentle aeration; eggs hatch within 24–48 hours.</li>
+                  <li><strong>Feeding Fry:</strong> Start with infusoria or liquid fry food, then baby brine shrimp once free-swimming.</li>
+                  <li><strong>Water Quality:</strong> Keep water clean with small, regular changes; avoid strong currents.</li>
+                </ol>
+              </div>
+
+              {/* Common Problems */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Common Problems</h3>
+                <ul className="text-white text-sm list-disc list-inside space-y-1">
+                  <li><strong>Egg Fungus:</strong> Poor water quality can lead to fungal growth on eggs.</li>
+                  <li><strong>Parent Aggression:</strong> Adults may eat eggs; monitor closely.</li>
+                  <li><strong>Weak Fry:</strong> Insufficient nutrition or unstable water can slow growth.</li>
+                  <li><strong>Failed Spawning:</strong> Stress or improper tank setup can prevent breeding.</li>
+                </ul>
+              </div>
+
+              {/* Selective Breeding & Genetics */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Selective Breeding & Genetics</h3>
+                <p className="text-white text-sm">
+                  Barbs come in many colors and patterns. Select pairs to enhance desired traits, monitor offspring for quality, and maintain strong genetics and vibrant coloration.
+                </p>
+              </div>
+
+            </div>
+
+            {/* WATCH VIDEO BUTTON */}
+            <div className="mt-10">
+              <a
                 href="https://youtu.be/tQkYMIuqx-g?si=aN0E7d4gDiYFs30j"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-emerald-500/80 hover:bg-emerald-400 text-black font-semibold shadow-lg shadow-emerald-600/40 transition-transform hover:scale-110"
               >
-                Watch the video 
+                Watch the Video
               </a>
+            </div>
+
           </div>
         </div>
       </div>
+
+      {/* ✨ ANIMATIONS */}
+      <style jsx>{`
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-25px); }
+        }
+        .animate-float-slow { animation: float-slow 12s ease-in-out infinite; }
+
+        @keyframes fade-in-blur {
+          0% { opacity: 0; filter: blur(18px); transform: translateY(10px); }
+          100% { opacity: 1; filter: blur(0px); transform: translateY(0px); }
+        }
+        .fade-in-blur { animation: fade-in-blur 1s forwards; }
+        .fade-in-blur-delay { animation-delay: 0.3s; }
+        .fade-in-blur-delay-2 { animation-delay: 0.6s; }
+      `}</style>
     </>
   );
 }

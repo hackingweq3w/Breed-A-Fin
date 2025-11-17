@@ -54,11 +54,14 @@ export default function Home() {
           <h1 className="text-emerald-300 text-5xl md:text-7xl font-extrabold drop-shadow-[0_0_30px_rgba(0,255,150,0.4)] animate-fade-in">
             Breed-A-Fin
           </h1>
+          
+ 
+
 
           {/* SUBTEXT */}
-          <p className="text-emerald-100/90 text-base md:text-2xl max-w-2xl mx-auto mt-6 drop-shadow-[0_0_15px_rgba(0,255,140,0.3)] animate-fade-in delay-300">
-            Your ultimate guide to fish breeding and aquarium care —  
-            crafted for healthy, thriving aquatic life.
+          <p className="text-white text-base md:text-2xl max-w-2xl mx-auto mt-6 drop-shadow-[0_0_15px_rgba(0,255,140,0.3)] animate-fade-in delay-300 ">
+          <b>Your ultimate guide to fish breeding<br />
+          and aquarium care, crafted for thriving aquatic life.</b>
           </p>
 
           {/* BUTTONS */}

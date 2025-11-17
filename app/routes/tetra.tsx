@@ -7,6 +7,7 @@ export async function loader() {
 
 export default function Tetra() {
   const [animate, setAnimate] = React.useState(false);
+
   React.useEffect(() => {
     setAnimate(true);
     document.title = "Tetra Breeding Guide - Breed-A-Fin";
@@ -14,118 +15,137 @@ export default function Tetra() {
 
   return (
     <>
-      {/* Background animation */}
-      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-green-900 via-green-800 to-green-700">
-        {/* Animated gradient circles */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-green-400/60 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-green-300/70 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-[1400px] h-[1400px] bg-green-500/55 rounded-full blur-3xl animate-pulse delay-500"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-[900px] h-[900px] bg-green-600/65 rounded-full blur-3xl animate-pulse delay-1500"></div>
-          <div className="absolute top-1/3 right-1/3 w-[1100px] h-[1100px] bg-green-400/60 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      {/* 🌑 DARK EMERALD BACKGROUND */}
+      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-black via-[#0a1a0a] to-black">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-emerald-700/40 rounded-full blur-[150px] animate-float-slow"></div>
+          <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-emerald-600/40 rounded-full blur-[150px] animate-float-slow delay-700"></div>
+          <div className="absolute top-1/2 left-1/2 w-[1400px] h-[1400px] bg-emerald-500/35 rounded-full blur-[150px] animate-float-slow delay-300"></div>
         </div>
       </div>
 
-      {/* Scrollable content */}
-      <div className="relative z-10 min-h-[120vh] flex items-start justify-center pt-16 md:pt-24 pb-40">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-green-800/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-green-300/30 shadow-2xl">
-            
-            {/* Main Heading */}
+      {/* 📜 CONTENT */}
+      <div className="relative z-10 min-h-[160vh] flex items-start justify-center pt-20 md:pt-32 pb-40">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-12 border border-emerald-400/20 shadow-xl shadow-emerald-900/40">
+
+            {/* TITLE */}
             <p
-              className={`text-2xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center ${
-                animate
-                  ? "fade-in-blur"
-                  : "opacity-0 blur-[12px] translate-y-2"
+              className={`text-4xl md:text-6xl font-extrabold text-emerald-300 drop-shadow-[0_0_20px_rgba(0,255,100,0.35)] ${
+                animate ? "fade-in-blur" : "opacity-0 blur-xl translate-y-4"
               }`}
             >
               Tetra Breeding Guide
             </p>
 
-            {/* Intro Paragraph */}
+            {/* DESCRIPTION */}
             <p
-              className={`text-base md:text-lg mt-6 text-white font-normal inter-var text-center max-w-3xl mx-auto ${
-                animate
-                  ? "fade-in-blur fade-in-blur-delay"
-                  : "opacity-0 blur-[12px] translate-y-2"
+              className={`text-white text-base md:text-lg mt-6 leading-relaxed ${
+                animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-xl translate-y-4"
               }`}
             >
-              Tetras are small, schooling egg-scatterers known for their bright colors and peaceful nature. Breeding them successfully requires soft, slightly acidic water, dim lighting, and careful separation of parents after spawning.
+              Tetras are small, peaceful, schooling fish known for their vibrant colors. Breeding them requires soft, slightly acidic water, careful pair selection, and protection of eggs and fry.
             </p>
 
-            {/* Choosing the Breeding Pair */}
-            <h2
-              className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
-              }`}
-            >
-              Choosing the Tetra Pair
-            </h2>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Select mature, healthy tetras—ideally around 8–12 months old. Males are typically slimmer and more colorful, while females appear rounder when carrying eggs. Ensure both are active and free of diseases or fin damage.
-            </p>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Condition the pair (or small group) for about a week on high-protein live foods like daphnia, mosquito larvae, and baby brine shrimp. Feed small amounts multiple times daily to prepare them for spawning.
-            </p>
+            {/* SECTIONS */}
+            <div className={`mt-10 grid md:grid-cols-1 gap-6 ${
+              animate ? "fade-in-blur fade-in-blur-delay-2" : "opacity-0 blur-xl translate-y-4"
+            }`}>
 
-            {/* Tank Setup Section */}
-            <h2
-              className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
-              }`}
-            >
-              Tank Setup
-            </h2>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Use a separate 10–15 gallon breeding tank. Keep the water soft (1–5 dGH), slightly acidic (pH 5.5–6.5), and warm (around 77–80°F or 25–27°C). Dim lighting and a dark substrate or black paper under the tank help reduce egg loss to light sensitivity.
-            </p>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center max-w-3xl mx-auto">
-              Add fine-leaved plants such as Java moss, or use a spawning mop or mesh grid so eggs can fall through, preventing the adults from eating them. Gentle aeration and no filtration during spawning keep the water calm.
-            </p>
+              {/* Choosing the Pair */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Choosing the Tetra Pair</h3>
+                <p className="text-white text-sm">
+                  Select mature, healthy tetras aged 8–12 months. Males are slimmer and more colorful, females are rounder when carrying eggs. Ensure fish are active and free of disease or fin damage.
+                </p>
+                <p className="text-white text-sm mt-2">
+                  Condition the pair or small group for a week on high-protein live foods like daphnia, mosquito larvae, or baby brine shrimp, feeding small amounts multiple times per day.
+                </p>
+              </div>
 
-            {/* Steps for Breeding Section */}
-            <h2
-              className={`text-2xl md:text-2xl lg:text-4xl text-white font-bold inter-var text-center mt-12 ${
-                animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
-              }`}
-            >
-              Steps for Breeding
-            </h2>
-            <ol className="text-base md:text-lg mt-4 text-white font-normal inter-var max-w-3xl mx-auto space-y-3 list-decimal list-inside">
-              <li>
-                <strong>Introduce the Pair at Night:</strong> Add the conditioned male and female (or small group) to the breeding tank in the evening.
-              </li>
-              <li>
-                <strong>Spawning Begins at Dawn:</strong> Tetras usually spawn in the early morning hours. The male will chase the female, and she will scatter eggs among the plants or mop.
-              </li>
-              <li>
-                <strong>Remove Adults:</strong> After spawning (usually lasting 1–2 hours), remove the parents immediately to prevent them from eating the eggs.
-              </li>
-              <li>
-                <strong>Egg Care:</strong> Keep the tank dark for 24–48 hours. Eggs will hatch within 24–36 hours, depending on temperature.
-              </li>
-              <li>
-                <strong>Free-Swimming Fry:</strong> Fry become free-swimming after 3–4 days. At this stage, begin feeding infusoria or liquid fry food several times daily.
-              </li>
-              <li>
-                <strong>Growth and Water Changes:</strong> After a week, start feeding microworms or newly hatched brine shrimp. Maintain clean water with gentle aeration and small daily changes.
-              </li>
-            </ol>
+              {/* Tank Setup */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Tank Setup</h3>
+                <p className="text-white text-sm">
+                  Use a 10–15 gallon breeding tank. Maintain soft water (1–5 dGH), slightly acidic pH 5.5–6.5, and temperature 25–27°C. Dim lighting and dark substrate reduce stress and egg loss.
+                </p>
+                <p className="text-white text-sm mt-2">
+                  Add fine-leaved plants like Java moss or a spawning mop so eggs can fall through. Gentle aeration helps oxygenate eggs without disturbing them.
+                </p>
+              </div>
 
-            {/* Button */}
-            <div className="mt-10">
-              <a
-                href="https://youtu.be/SKWNyXCxBIk?si=Hk0OX9gTOi8u4qU-"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
-              >
-                Watch the video
-              </a>
+              {/* Water Parameters */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Water Parameters</h3>
+                <p className="text-white text-sm">
+                  Maintain temperature 25–27°C (77–80°F), pH 5.5–6.5, hardness 1–5 dGH. Keep ammonia and nitrites at 0 ppm, nitrates below 20 ppm. Stable, clean water is critical for egg and fry survival.
+                </p>
+              </div>
+
+              {/* Steps for Breeding */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Steps for Breeding</h3>
+                <ol className="text-white text-sm list-decimal list-inside space-y-1">
+                  <li><strong>Introduce Pair at Night:</strong> Add conditioned fish in the evening.</li>
+                  <li><strong>Spawning at Dawn:</strong> Males chase females and eggs are scattered among plants or mop.</li>
+                  <li><strong>Remove Adults:</strong> After 1–2 hours to prevent egg predation.</li>
+                  <li><strong>Egg Care:</strong> Keep tank dark for 24–48 hours; eggs hatch in 24–36 hours.</li>
+                  <li><strong>Free-Swimming Fry:</strong> Begin feeding infusoria or liquid fry food after 3–4 days.</li>
+                  <li><strong>Growth & Water Changes:</strong> Feed microworms or baby brine shrimp after a week. Maintain clean water with gentle daily changes.</li>
+                </ol>
+              </div>
+
+              {/* Common Problems */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Common Problems</h3>
+                <ul className="text-white text-sm list-disc list-inside space-y-1">
+                  <li><strong>Egg Predation:</strong> Adults may eat eggs if not removed promptly.</li>
+                  <li><strong>Water Fluctuations:</strong> Sensitive to pH or temperature swings, leading to poor hatching.</li>
+                  <li><strong>Slow Fry Growth:</strong> Inadequate nutrition or poor water quality.</li>
+                </ul>
+              </div>
+
+              {/* Selective Breeding & Genetics */}
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Selective Breeding & Genetics</h3>
+                <p className="text-white text-sm">
+                  Tetras offer various color morphs (neon, cardinal, glowlight, etc.). Select healthy, vibrant breeders to emphasize color and size. Maintain genetic diversity by rotating breeding stock and avoiding inbreeding.
+                </p>
+              </div>
+
+              {/* Watch Video Button */}
+              <div className="mt-6">
+                <a
+                  href="https://youtu.be/SKWNyXCxBIk?si=Hk0OX9gTOi8u4qU-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-emerald-500/80 hover:bg-emerald-400 text-black font-semibold shadow-lg shadow-emerald-600/40 transition-transform hover:scale-110"
+                >
+                  Watch the Video
+                </a>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
+
+      {/* ✨ ANIMATIONS */}
+      <style jsx>{`
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-25px); }
+        }
+        .animate-float-slow { animation: float-slow 12s ease-in-out infinite; }
+
+        @keyframes fade-in-blur {
+          0% { opacity: 0; filter: blur(18px); transform: translateY(10px); }
+          100% { opacity: 1; filter: blur(0px); transform: translateY(0px); }
+        }
+        .fade-in-blur { animation: fade-in-blur 1s forwards; }
+        .fade-in-blur-delay { animation-delay: 0.3s; }
+        .fade-in-blur-delay-2 { animation-delay: 0.6s; }
+      `}</style>
     </>
   );
 }

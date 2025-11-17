@@ -68,7 +68,7 @@ export default function About() {
 
             {/* DESC */}
             <p
-              className={`text-base md:text-lg mt-6 text-emerald-100/90 font-normal inter-var max-w-3xl mx-auto ${
+              className={`text-base md:text-lg mt-6 text-white font-normal inter-var max-w-3xl mx-auto ${
                 animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-[12px] translate-y-2"
               }`}
             >
@@ -91,7 +91,7 @@ export default function About() {
                 backdrop-blur-lg
               ">
                 <h3 className="text-xl font-semibold text-emerald-300 mb-3">Our Mission</h3>
-                <p className="text-emerald-100/80 text-sm">
+                <p className="text-white text-sm">
                   Making fish breeding accessible, ethical, and rewarding through modern guides,
                   science-backed insights, and powerful tools.
                 </p>
@@ -106,7 +106,7 @@ export default function About() {
                 backdrop-blur-lg
               ">
                 <h3 className="text-xl font-semibold text-emerald-300 mb-3">What We Offer</h3>
-                <p className="text-emerald-100/80 text-sm">
+                <p className="text-white text-sm">
                   Step-by-step species guides, fry care strategies, water parameter advice,
                   and an AI assistant that helps you plan setups.
                 </p>
