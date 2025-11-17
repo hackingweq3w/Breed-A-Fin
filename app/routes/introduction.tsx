@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { BackgroundGradientAnimation } from "components/ui/background-gradient-animation"
 import { FloatingDock } from "components/ui/floating-dock";
 import {
   IconHome,
@@ -22,73 +21,130 @@ export default function Introduction() {
   }, []);
 
   const dockItems = [
-    { title: "Home", icon: <IconHome className="h-5 w-5 text-white" />, href: "/" },
-    { title: "Introduction", icon: <IconBook2 className="h-5 w-5 text-white" />, href: "/introduction" },
-    { title: "Guide", icon: <IconBrain className="h-5 w-5 text-white" />, href: "/Guide" },
-    { title: "AI Assistant", icon: <IconTopologyStar className="h-5 w-5 text-white" />, href: "/ai" },
-    { title: "About", icon: <IconInfoCircle className="h-5 w-5 text-white" />, href: "/about" },
+    { title: "Home", icon: <IconHome className="h-5 w-5 text-emerald-300" />, href: "/" },
+    { title: "Introduction", icon: <IconBook2 className="h-5 w-5 text-emerald-300" />, href: "/introduction" },
+    { title: "Guide", icon: <IconBrain className="h-5 w-5 text-emerald-300" />, href: "/Guide" },
+    { title: "AI Assistant", icon: <IconTopologyStar className="h-5 w-5 text-emerald-300" />, href: "/ai" },
+    { title: "About", icon: <IconInfoCircle className="h-5 w-5 text-emerald-300" />, href: "/about" },
   ];
 
   return (
     <>
-      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-green-900 via-green-800 to-green-700">
-        {/* Animated gradient circles */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-green-400/60 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-green-300/70 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-[1400px] h-[1400px] bg-green-500/55 rounded-full blur-3xl animate-pulse delay-500"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-[900px] h-[900px] bg-green-600/65 rounded-full blur-3xl animate-pulse delay-1500"></div>
-          <div className="absolute top-1/3 right-1/3 w-[1100px] h-[1100px] bg-green-400/60 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      {/* 🌑 DARK EMERALD BACKGROUND */}
+      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-black via-[#0a1a0a] to-black">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-emerald-700/40 rounded-full blur-[150px] animate-float-slow"></div>
+          <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-emerald-600/40 rounded-full blur-[150px] animate-float-slow delay-700"></div>
+          <div className="absolute top-1/2 left-1/2 w-[1400px] h-[1400px] bg-emerald-500/35 rounded-full blur-[150px] animate-float-slow delay-300"></div>
         </div>
       </div>
 
-      {/* Scrollable content */}
-      <div className="relative z-10 min-h-[120vh] flex items-start justify-center pt-16 md:pt-24 pb-40">
+      {/* 📜 CONTENT */}
+      <div className="relative z-10 min-h-[140vh] flex items-start justify-center pt-20 md:pt-32 pb-40">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-green-800/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-green-300/30 shadow-2xl">
-            <p className={`text-2xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center ${
-              animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-2"
-            }`}>
-              Welcome to Fish Breeding
-            </p>
-            <p className={`text-base md:text-lg mt-6 text-white font-normal inter-var text-center max-w-3xl mx-auto ${
-              animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-[12px] translate-y-2"
-            }`}>
-              Discover the fascinating world of fish breeding and aquarium care. Learn about different species, breeding techniques, and how to create the perfect environment for your aquatic friends to thrive and reproduce. From understanding water chemistry and temperature control to mastering feeding schedules and tank maintenance, we cover every essential aspect. Explore advanced topics like selective breeding, genetic diversity, and creating optimal spawning conditions. Whether you're interested in livebearers, egg-layers, or rare tropical species, our comprehensive guides will help you succeed in every step of your fish breeding journey.
+
+          <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-12 border border-emerald-400/20 shadow-xl shadow-emerald-900/40">
+
+            {/* TITLE */}
+            <p
+              className={`text-4xl md:text-6xl font-extrabold text-emerald-300 drop-shadow-[0_0_20px_rgba(0,255,100,0.35)] ${
+                animate ? "fade-in-blur" : "opacity-0 blur-xl translate-y-4"
+              }`}
+            >
+              Introduction to Fish Breeding
             </p>
 
-            <div className={`mt-8 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto ${
-              animate ? "fade-in-blur fade-in-blur-delay-2" : "opacity-0 blur-[12px] translate-y-2"
-            }`}>
-              <div className="bg-green-800/20 backdrop-blur-sm rounded-lg p-6 border border-green-300/30">
-                <h3 className="text-xl font-semibold text-white mb-3">Getting Started</h3>
-                <p className="text-green-100 text-sm">
-                  Essential knowledge for beginners: tank setup, water parameters, and choosing your first breeding pair.
+            {/* DESCRIPTION */}
+            <p
+              className={`text-white text-base md:text-lg mt-6 leading-relaxed ${
+                animate ? "fade-in-blur fade-in-blur-delay" : "opacity-0 blur-xl translate-y-4"
+              }`}
+            >
+              Explore the amazing world of fish breeding! Learn how to create the perfect aquarium
+              environment, understand breeding behavior, and raise healthy fry. From tank setup and
+              water chemistry to advanced genetics and selective breeding — everything is covered in a
+              simple, beginner-friendly way.
+            </p>
+
+            {/* FEATURE GRID */}
+            <div
+              className={`mt-10 grid md:grid-cols-2 gap-6 ${
+                animate ? "fade-in-blur fade-in-blur-delay-2" : "opacity-0 blur-xl translate-y-4"
+              }`}
+            >
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Getting Started</h3>
+                <p className="text-white text-sm">
+                  Learn tank setup, parameters, cycling, and how to pick your first breeding pair.
                 </p>
               </div>
-              <div className="bg-green-800/20 backdrop-blur-sm rounded-lg p-6 border border-green-300/30">
-                <h3 className="text-xl font-semibold text-white mb-3">Breeding Basics</h3>
-                <p className="text-green-100 text-sm">
-                  Understanding fish behavior, spawning conditions, and caring for fry during their early development.
-                </p>
 
+              <div className="bg-black/30 border border-emerald-300/25 rounded-xl p-6 shadow-lg shadow-emerald-900/50 backdrop-blur-md">
+                <h3 className="text-emerald-300 text-xl font-semibold mb-3">Breeding Basics</h3>
+                <p className="text-white text-sm">
+                  Understand spawning behavior, fry care, and how to increase breeding success.
+                </p>
               </div>
             </div>
+
+            {/* START GUIDE BUTTON */}
             <a
               href="/guide"
-              className="inline-flex items-center justify-center mt-10 px-6 py-3 rounded-full bg-green-500/80 hover:bg-green-500 text-white font-medium border border-green-300/50 shadow-lg shadow-green-500/30 transition-colors"
+              className="inline-flex items-center justify-center mt-10 px-8 py-3 rounded-full bg-emerald-500/80 hover:bg-emerald-400 text-black font-semibold shadow-lg shadow-emerald-600/40 transition-transform hover:scale-110"
             >
               Start the Guide
             </a>
+
           </div>
         </div>
       </div>
-      
+
+      {/* ⚓ FLOATING DOCK */}
       <FloatingDock
         items={dockItems}
         desktopClassName="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50"
         mobileClassName="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50"
       />
+
+      {/* ✨ EXTRA ANIMATIONS */}
+      <style jsx>{`
+        @keyframes float-slow {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-25px);
+          }
+        }
+        .animate-float-slow {
+          animation: float-slow 12s ease-in-out infinite;
+        }
+
+        @keyframes fade-in-blur {
+          0% {
+            opacity: 0;
+            filter: blur(18px);
+            transform: translateY(10px);
+          }
+          100% {
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateY(0px);
+          }
+        }
+
+        .fade-in-blur {
+          animation: fade-in-blur 1s forwards;
+        }
+
+        .fade-in-blur-delay {
+          animation-delay: 0.3s;
+        }
+
+        .fade-in-blur-delay-2 {
+          animation-delay: 0.6s;
+        }
+      `}</style>
     </>
   );
 }

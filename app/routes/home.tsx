@@ -22,41 +22,59 @@ export default function Home() {
   }, []);
 
   const dockItems = [
-    { title: "Home", icon: <IconHome className="h-5 w-5 text-white" />, href: "home" },
-    { title: "Introduction", icon: <IconBook2 className="h-5 w-5 text-white" />, href: "introduction" },
-    { title: "Guide", icon: <IconBrain className="h-5 w-5 text-white" />, href: "guide" },
-    { title: "AI Assistant", icon: <IconTopologyStar className="h-5 w-5 text-white" />, href: "ai" },
-    { title: "About", icon: <IconInfoCircle className="h-5 w-5 text-white" />, href: "about" },
+    { title: "Home", icon: <IconHome className="h-5 w-5 text-emerald-300" />, href: "/" },
+    { title: "Introduction", icon: <IconBook2 className="h-5 w-5 text-emerald-300" />, href: "introduction" },
+    { title: "Guide", icon: <IconBrain className="h-5 w-5 text-emerald-300" />, href: "guide" },
+    { title: "AI Assistant", icon: <IconTopologyStar className="h-5 w-5 text-emerald-300" />, href: "ai" },
+    { title: "About", icon: <IconInfoCircle className="h-5 w-5 text-emerald-300" />, href: "about" },
   ];
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Animated Green Gradient Background (kept exactly as yours) */}
-      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-green-900 via-green-800 to-green-700 z-0">
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-green-400/60 rounded-full blur-3xl animate-pulse animate-float-slow"></div>
-          <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-green-300/70 rounded-full blur-3xl animate-pulse delay-1000 animate-float-slow"></div>
-          <div className="absolute top-1/2 left-1/2 w-[1400px] h-[1400px] bg-green-500/55 rounded-full blur-3xl animate-pulse delay-500 animate-float-slow"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-[900px] h-[900px] bg-green-600/65 rounded-full blur-3xl animate-pulse delay-1500 animate-float-slow"></div>
-          <div className="absolute top-1/3 right-1/3 w-[1100px] h-[1100px] bg-green-400/60 rounded-full blur-3xl animate-pulse delay-2000 animate-float-slow"></div>
+
+      {/* 🌑 DARK EMERALD GRADIENT BACKGROUND */}
+      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-black via-[#0a1a0a] to-black z-0">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30">
+
+          {/* Emerald glow nebula effects */}
+          <div className="absolute top-1/4 left-1/4 w-[1000px] h-[1000px] bg-emerald-700/40 rounded-full blur-[150px] animate-float-slow"></div>
+          <div className="absolute top-3/4 right-1/4 w-[900px] h-[900px] bg-emerald-500/45 rounded-full blur-[150px] animate-float-slow delay-700"></div>
+          <div className="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] bg-emerald-600/35 rounded-full blur-[160px] animate-float-slow delay-300"></div>
         </div>
       </div>
 
-      {/* Fullscreen Vortex Overlay */}
+      {/* 🌪 VORTEX EFFECT */}
       <Vortex
         backgroundColor="transparent"
         className="absolute inset-0 flex items-center justify-center w-full h-full z-10"
       >
         <div className="text-center px-4">
-          <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-xl animate-fade-in">
+
+          {/* MAIN TITLE */}
+          <h1 className="text-emerald-300 text-5xl md:text-7xl font-extrabold drop-shadow-[0_0_30px_rgba(0,255,150,0.4)] animate-fade-in">
             Breed-A-Fin
           </h1>
-          <p className="text-white text-base md:text-2xl max-w-2xl mx-auto mt-6 drop-shadow-md animate-fade-in delay-300">
-            Your ultimate guide to fish breeding and aquarium care for healthy, thriving aquatic life.
+
+          {/* SUBTEXT */}
+          <p className="text-emerald-100/90 text-base md:text-2xl max-w-2xl mx-auto mt-6 drop-shadow-[0_0_15px_rgba(0,255,140,0.3)] animate-fade-in delay-300">
+            Your ultimate guide to fish breeding and aquarium care —  
+            crafted for healthy, thriving aquatic life.
           </p>
+
+          {/* BUTTONS */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 animate-fade-in delay-600">
             <button
-              className="px-6 py-3 bg-green-900 hover:bg-green-700 text-white font-semibold rounded-xl shadow-lg transition transform hover:scale-105"
+              className="
+                px-6 py-3 
+                bg-emerald-600/80 
+                hover:bg-emerald-500 
+                text-black 
+                font-semibold 
+                rounded-xl 
+                shadow-lg shadow-emerald-600/40 
+                transition-transform 
+                hover:scale-110
+              "
               onClick={() => navigate("introduction")}
             >
               Explore Now
@@ -65,32 +83,33 @@ export default function Home() {
         </div>
       </Vortex>
 
-      {/* Floating Dock */}
+      {/* ⚓ FLOATING DOCK */}
       <FloatingDock
         items={dockItems.map(item => ({
           ...item,
           onClick: () => navigate(item.href),
-          className: "transition-transform hover:scale-110 hover:text-green-300",
+          className: "transition-transform hover:scale-110 hover:text-emerald-300",
         }))}
         desktopClassName="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50"
         mobileClassName="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50"
       />
 
-      {/* Extra Tailwind Animations */}
+      {/* 🌬 EXTRA ANIMATIONS */}
       <style jsx>{`
         @keyframes float-slow {
           0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          50% { transform: translateY(-25px); }
         }
         .animate-float-slow {
           animation: float-slow 12s ease-in-out infinite;
         }
+
         @keyframes fade-in {
           0% { opacity: 0; transform: translateY(20px); }
           100% { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in {
-          animation: fade-in 1s forwards;
+          animation: fade-in 1.2s forwards;
         }
         .animate-fade-in.delay-300 {
           animation-delay: 0.3s;

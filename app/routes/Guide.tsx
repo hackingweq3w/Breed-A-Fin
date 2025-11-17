@@ -33,19 +33,19 @@ export default function Guide() {
 
   return (
     <>
-      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-green-900 via-green-800 to-green-700">
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-[1200px] h-[1200px] bg-green-400/60 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-3/4 right-1/4 w-[1000px] h-[1000px] bg-green-300/70 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-[1400px] h-[1400px] bg-green-500/55 rounded-full blur-3xl animate-pulse delay-500"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-[900px] h-[900px] bg-green-600/65 rounded-full blur-3xl animate-pulse delay-1500"></div>
-          <div className="absolute top-1/3 right-1/3 w-[1100px] h-[1100px] bg-green-400/60 rounded-full blur-3xl animate-pulse delay-2000"></div>
+     <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-black via-[#0a1a0a] to-black z-0">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30">
+
+          {/* Emerald glow nebula effects */}
+          <div className="absolute top-1/4 left-1/4 w-[1000px] h-[1000px] bg-emerald-700/40 rounded-full blur-[150px] animate-float-slow"></div>
+          <div className="absolute top-3/4 right-1/4 w-[900px] h-[900px] bg-emerald-500/45 rounded-full blur-[150px] animate-float-slow delay-700"></div>
+          <div className="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] bg-emerald-600/35 rounded-full blur-[160px] animate-float-slow delay-300"></div>
         </div>
       </div>
 
       <div className="relative z-5 flex items-start justify-center pt-4 md:pt-6 pb-0">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-green-600/20 backdrop-blur-sm rounded-4xl p-8 md:p-12 border border-green-300/30 shadow-2xl">
+          <div className="bg-emerald-600/20 backdrop-blur-sm rounded-4xl p-8 md:p-12 border border-emerald-300/30 shadow-2xl">
             <p
               className={`text-2xl md:text-4xl lg:text-3xl text-white font-bold text-center ${
                 animate ? "fade-in-blur" : "opacity-0 blur-[12px] translate-y-4"
@@ -156,7 +156,7 @@ function ExpandableCardDemo() {
                     exit={{ opacity: 0 }}
                     href={active.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-emerald-500 text-white"
                   >
                     {active.ctaText}
                   </motion.a>
@@ -181,14 +181,13 @@ function ExpandableCardDemo() {
         ) : null}
       </AnimatePresence>
 
-      {/* ✅ UPDATED GRID BELOW */}
       <ul className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 pb-10">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer transition"
+            className="p-4 flex flex-col hover:bg-emerald-100 dark:hover:bg-emerald-800 rounded-xl cursor-pointer transition"
           >
             <div className="flex gap-4 flex-col w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -203,13 +202,13 @@ function ExpandableCardDemo() {
               <div className="flex flex-col items-center">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center text-base"
+                  className="font-medium text-white dark:text-neutral-200 text-center text-base"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.title}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center text-base"
+                  className="text-white dark:text-neutral-400 text-center text-base"
                 >
                   {card.description}
                 </motion.p>
@@ -413,3 +412,5 @@ const cards = [
     ),
   },
 ];
+
+
