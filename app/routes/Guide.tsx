@@ -401,7 +401,7 @@ const cards = [
   },
   {
     description: "Oviparous",
-    title: "Gowrami",
+    title: "Gourami",
     src: "gowrami.jpg",
     ctaText: "Learn More",
     ctaLink: "/gowrami",
